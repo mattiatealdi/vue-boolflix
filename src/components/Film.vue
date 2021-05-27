@@ -6,6 +6,7 @@
           <li v-if="film.original_language == 'it'">Lingua: {{ film.original_language }} <country-flag country='it' size='small'/></li>
           <li v-if="film.original_language =='en'">Lingua: {{film.original_language}} <country-flag country='gb' size='small'/> </li>
           <li>Voto: {{film.vote_average}} </li>
+          <li><img :src="film.backdrop_path" alt=""></li>
       </ul>
   </div>
 </template>
