@@ -47,24 +47,22 @@ ul{
 .films{
     position: relative;
     display: inline-block;
+    &:hover .film{
+        visibility: visible;
+    }
+    &:hover .film_img{
+        visibility: hidden;
+    }
 }
+
 
 .film{
     position: absolute;
     width: 342px;
     color: white;
-    display: block;
-    &:hover{
-
-    }
+    visibility: hidden;
 }
 
-.film_img{
-    &:hover{
-        background-color:#434343;
-        z-index: 999;
-    }
-}
 
 
 
