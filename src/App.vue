@@ -22,5 +22,12 @@ export default {
 <style lang="scss">
 #app {
 
+};
+
+body{
+  margin:0;
+  padding: 0;
+  background-color: #434343;
+  
 }
 </style>

@@ -1,21 +1,30 @@
 <template>
-  <main>
-      <input type="text" v-model="query">
-      <button type="submitFilm" @click="getFilm('movie')">MOVIES</button>
-      <button type="submitTv" @click="getFilm('tv')">TV</button>
-      <button type="submit" @click="getFilm('tv'); getFilm('movie');">ALL</button>
     
-      <Film 
-        v-for="film in arrMovies"
-        :key="film.id"
-        :film="film"
-      />
 
-      <Film
-        v-for="film in arrTv"
-        :key="film.id"
-        :film="film"
-      />
+  <main>
+
+      <div class="header">
+          <h1>BoolFix</h1>
+        <input type="text" v-model="query" placeholder="Cosa vuoi cercare?">
+        <button type="submitFilm" @click="getFilm('movie')">MOVIES</button>
+        <button type="submitTv" @click="getFilm('tv')">TV</button>
+        <button type="submit" @click="getFilm('tv'); getFilm('movie');">ALL</button>
+    
+      </div>
+      
+      <div class="film_container">
+        <Film 
+            v-for="film in arrMovies"
+            :key="film.id"
+            :film="film"
+        />
+
+        <Film
+            v-for="film in arrTv"
+            :key="film.id"
+            :film="film"
+        />
+      </div>
 
       <!-- <h1 v-if="arrFilms == 0 && arrFilms.length == 0">Nessun risultato trovato</h1> -->
   </main>
@@ -99,5 +108,42 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    
+    .header{
+        display: flex;
+        h1{
+            color: red;
+            line-height: 100px;
+            margin-left: 100px;
+        }
+        height: 100px;
+        background-color: #000000;
+        input{
+            border: none;
+            height: 50px;
+            line-height: 100px;
+            margin-left: 50%;
+            margin-top: 25px;
+            width: 400px;
+        }
+        button{
+            height: 50px;
+            margin-top: 25px;
+            margin-left: 10px;
+            padding: 10px;
+        }
+    }
+
+
+}
+
+
 
 </style>
